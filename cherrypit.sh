@@ -107,14 +107,15 @@ pit_main()
 
 # check
 scraper=0
+# my filters, please change these if you're hosting from boaform or cgi-bin.
 case "${REQUEST_URI:-}" in
 	# scraper is searching for dotfiles and env
-	*.env*|aws/)
+	*.env*|/aws*|/s3.*)
 		scraper=1
 		content=text/plain
 	;;
 	# things that would expect an html page like a router login
-	*.php|boaform|cgi-bin)
+	*.php|*/boaform/*|*cgi-bin*|/login*|/admin*|/setup*)
 		scraper=1
 		content=text/html
 	;;
