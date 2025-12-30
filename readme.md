@@ -1,3 +1,5 @@
+# moved to codeberg: https://codeberg.org/9vlc/cherrypit
+
 # cherrypit
 this is a simple web tarpit made in shell script, designed to waste the resources of
 automatic vulnerability search bots, ai scrapers, etc.
